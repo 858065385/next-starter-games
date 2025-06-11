@@ -26,10 +26,10 @@
     "buyNow": "Acheter Maintenant"
   },
   "footer": {
-    "copyright": "© 2025 Mon Application Multilingue. Tous droits réservés.",
-    "privacy": "Politique de Confidentialité",
-    "terms": "Conditions d'Utilisation",
-    "contact": "Contactez-Nous"
+    "copyright": "© 2025 Mon application multilingue. Tous les droits sont réservés.",
+    "privacy": "Politique de confidentialité",
+    "about": "À propos de nous",
+    "contact": "Contactez-nous"
   },
   "common": {
     "loading": "Chargement...",

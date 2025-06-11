@@ -460,9 +460,8 @@ h6 {
     }
 }
 
-.nav-links {
-    display: none;
-    /* Hide nav links by default on mobile */
+.nav-links a{
+   position: relative;
 }
 
 /* 游戏列表样式 */

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { Locale, defaultLocale } from '@/app/config/i18n';
+import { getLocalizedText } from '@/lib/utils';
 
 // 私有组件翻译
 const translations = {
@@ -81,35 +82,6 @@ function fixImagePath(path: string): string {
 }
 
 /**
- * 获取本地化文本
- * @param textObj 多语言文本对象或字符串
- * @param locale 当前语言
- * @param defaultLocale 默认语言
- * @returns 本地化文本
- */
-function getLocalizedText(textObj: any, locale: Locale, defaultLocale: Locale): string {
-  if (!textObj) return '';
-  
-  // 如果是字符串，直接返回
-  if (typeof textObj === 'string') return textObj;
-  
-  // 如果是对象，尝试获取当前语言的文本
-  if (typeof textObj === 'object') {
-    // 优先使用当前语言
-    if (textObj[locale]) return textObj[locale];
-    
-    // 其次使用默认语言
-    if (textObj[defaultLocale]) return textObj[defaultLocale];
-    
-    // 最后使用对象中的第一个值
-    const firstKey = Object.keys(textObj)[0];
-    if (firstKey) return textObj[firstKey];
-  }
-  
-  return '';
-}
-
-/**
  * 游戏列表组件
  * 负责从games.json加载游戏数据并渲染到页面
  */
@@ -171,7 +143,7 @@ export default function GamesList() {
     const fixedImageUrl = fixImagePath(imageUrl);
     
     // 获取本地化文本
-    const title = getLocalizedText(game.title, locale, defaultLocale);
+    const title = getLocalizedText(game.title, locale);
     
     return (
       <Link 
@@ -210,8 +182,8 @@ export default function GamesList() {
 
     const results = Object.values(gamesData.games).filter(game => {
       // 获取本地化文本用于搜索
-      const title = getLocalizedText(game.title, locale, defaultLocale);
-      const description = getLocalizedText(game.description, locale, defaultLocale);
+      const title = getLocalizedText(game.title, locale);
+      const description = getLocalizedText(game.description, locale);
       
       const searchString = `${title} ${description} ${game.tags.join(' ')} ${game.category}`.toLowerCase();
       return searchString.includes(searchTerm.toLowerCase());
@@ -243,13 +215,18 @@ export default function GamesList() {
 
     return sortedCategories.map(([categoryId, category]) => {
       // 获取本地化文本
-      const title = getLocalizedText(category.title, locale, defaultLocale);
-      const description = getLocalizedText(category.description, locale, defaultLocale);
+      const title = getLocalizedText(category.title, locale);
+      const description = getLocalizedText(category.description, locale);
 
       // 获取该分类下的所有游戏
       const categoryGames = Object.values(gamesData.games).filter(
         game => game.category === categoryId
       );
+
+      // 如果分类下没有游戏，则不渲染该分类
+      if (categoryGames.length === 0) {
+        return null;
+      }
 
       return (
         <section key={categoryId} className="game-category">

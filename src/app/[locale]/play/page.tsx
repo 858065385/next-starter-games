@@ -3,8 +3,9 @@
 import { Locale, defaultLocale } from '@/app/config/i18n'
 import { useParams, useSearchParams } from 'next/navigation'
 import { useState, useEffect, useCallback, useMemo } from 'react'
-import { Game, GamesData, getLocalizedText } from '@/types/games'
+import { Game, GamesData } from '@/types/games'
 import Link from 'next/link'
+import { getLocalizedText } from '@/lib/utils'
 import Image from 'next/image'
 
 /**
@@ -195,9 +196,9 @@ export default function PlayPage() {
   }
   
   // 获取本地化文本
-  const title = getLocalizedText(game.title, locale, defaultLocale);
-  const description = getLocalizedText(game.description, locale, defaultLocale);
-  const instructions = getLocalizedText(game.instructions, locale, defaultLocale);
+  const title = getLocalizedText(game.title, locale);
+  const description = getLocalizedText(game.description, locale);
+  const instructions = getLocalizedText(game.instructions, locale);
   
   return (
     <div className="game-page-container">

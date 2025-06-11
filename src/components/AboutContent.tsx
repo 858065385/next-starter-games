@@ -7,31 +7,31 @@ import { useState, useEffect } from 'react'
 const translations = {
   en: {
     title: 'About Us',
-    description: 'Learn more about our company and our mission.',
-    history: 'Our company was founded with a mission to build exceptional multilingual websites.',
-    team: 'Our Team',
-    teamDescription: 'We have a dedicated team of developers, designers, and content creators.'
+    welcome: 'Welcome to PlayNow, your ultimate destination for free online games!',
+    mission: "Our mission is to provide a vast collection of games for players of all ages and interests. Whether you're into action, puzzles, racing, or adventure, we have something for everyone.",
+    updates: 'We are constantly updating our library with new and exciting games, so be sure to check back often.',
+    thankYou: 'Thank you for visiting, and we hope you have a fantastic time playing!'
   },
   zh: {
     title: '关于我们',
-    description: '了解更多关于我们公司和使命的信息。',
-    history: '我们公司成立的使命是构建卓越的多语言网站。',
-    team: '我们的团队',
-    teamDescription: '我们拥有一支专业的开发人员、设计师和内容创作者团队。'
+    welcome: '欢迎来到 PlayNow，您免费在线游戏的终极目的地！',
+    mission: '我们的使命是为所有年龄和兴趣的玩家提供大量的游戏。无论您喜欢动作、益智、赛车还是冒险，我们都能满足您的需求。',
+    updates: '我们会不断更新我们的游戏库，推出新的和令人兴奋的游戏，所以请务必经常回来查看。',
+    thankYou: '感谢您的光临，希望您玩得愉快！'
   },
   es: {
     title: 'Sobre Nosotros',
-    description: 'Conozca más sobre nuestra empresa y nuestra misión.',
-    history: 'Nuestra empresa fue fundada con la misión de construir sitios web multilingües excepcionales.',
-    team: 'Nuestro Equipo',
-    teamDescription: 'Contamos con un equipo dedicado de desarrolladores, diseñadores y creadores de contenido.'
+    welcome: '¡Bienvenido a PlayNow, tu destino definitivo para juegos en línea gratuitos!',
+    mission: 'Nuestra misión es proporcionar una vasta colección de juegos para jugadores de todas las edades e intereses. Ya sea que te guste la acción, los rompecabezas, las carreras o la aventura, tenemos algo para todos.',
+    updates: 'Estamos constantemente actualizando nuestra biblioteca con juegos nuevos y emocionantes, así que asegúrate de volver a menudo.',
+    thankYou: '¡Gracias por tu visita y esperamos que te diviertas mucho jugando!'
   },
   fr: {
     title: 'À Propos de Nous',
-    description: 'En savoir plus sur notre entreprise et notre mission.',
-    history: 'Notre entreprise a été fondée avec pour mission de construire des sites Web multilingues exceptionnels.',
-    team: 'Notre Équipe',
-    teamDescription: 'Nous avons une équipe dédiée de développeurs, de designers et de créateurs de contenu.'
+    welcome: "Bienvenue sur PlayNow, votre destination ultime pour les jeux en ligne gratuits !",
+    mission: "Notre mission est de fournir une vaste collection de jeux pour les joueurs de tous âges et de tous intérêts. Que vous aimiez l'action, les puzzles, la course ou l'aventure, nous avons quelque chose pour tout le monde.",
+    updates: "Nous mettons constamment à jour notre bibliothèque avec de nouveaux jeux passionnants, alors n'oubliez pas de revenir souvent.",
+    thankYou: "Merci de votre visite et nous espérons que vous passerez un moment fantastique à jouer !"
   }
 };
 
@@ -47,18 +47,12 @@ export function AboutContent({
   const t = translations[locale] || translations.en;
   
   return (
-    <div className="max-w-4xl mx-auto">
+    <main className="main-content max-w-4xl mx-auto p-4 md:p-6">
       <h1 className="text-3xl font-bold mb-6">{t.title}</h1>
-      
-      <div className="mb-8">
-        <p className="text-lg mb-4">{t.description}</p>
-        <p className="mb-4">{t.history}</p>
-      </div>
-      
-      <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">{t.team}</h2>
-        <p>{t.teamDescription}</p>
-      </div>
-    </div>
+      <p className="text-lg mb-4">{t.welcome}</p>
+      <p className="mb-4">{t.mission}</p>
+      <p className="mb-4">{t.updates}</p>
+      <p className="text-lg font-semibold">{t.thankYou}</p>
+    </main>
   )
 } 

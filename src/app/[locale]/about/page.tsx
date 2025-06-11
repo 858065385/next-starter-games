@@ -15,20 +15,20 @@ export async function generateMetadata({
   // 直接在页面中定义元数据
   const metadata = {
     en: {
-      title: 'About Us - Multilingual App',
-      description: 'Learn more about our company and our mission'
+      title: 'About Us - PlayNow',
+      description: 'Welcome to PlayNow, your ultimate destination for free online games!'
     },
     zh: {
-      title: '关于我们 - 多语言应用',
-      description: '了解更多关于我们公司和使命'
+      title: '关于我们 - PlayNow',
+      description: '欢迎来到 PlayNow，您免费在线游戏的终极目的地！'
     },
     es: {
-      title: 'Acerca de Nosotros - Aplicación Multilingüe',
-      description: 'Aprenda más sobre nuestra empresa y nuestra misión'
+      title: 'Sobre Nosotros - PlayNow',
+      description: '¡Bienvenido a PlayNow, tu destino definitivo para juegos en línea gratuitos!'
     },
     fr: {
-      title: 'À Propos de Nous - Application Multilingue',
-      description: 'En savoir plus sur notre entreprise et notre mission'
+      title: 'À Propos de Nous - PlayNow',
+      description: 'Bienvenue sur PlayNow, votre destination ultime pour les jeux en ligne gratuits !'
     }
   }
   

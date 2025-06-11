@@ -1,327 +1,488 @@
 {
   "categories": {
-      "action": {
-          "title": "🔥 Action-Packed Thrills",
-          "description": "Get into the heart of the action with these exciting games!",
-          "weight": 100,
-          "games": ["pacman", "snake", "defender", "monster-survivors", "one-falls-all-fall", "7296", "6152", "10144"]
+    "action": {
+      "title": {
+        "en": "🔥 Action-Packed Thrills",
+        "zh": "🔥 惊险刺激的动作游戏",
+        "es": "🔥 Emoción y Acción",
+        "fr": "🔥 Frissons et Action"
       },
-      "adventure": {
-          "title": "🗺️ Epic Adventures",
-          "description": "Embark on epic journeys and explore new worlds.",
-          "weight": 90,
-          "games": ["bounce", "18296", "2178", "2461", "16062"]
+      "description": {
+        "en": "Get into the heart of the action with these exciting games!",
+        "zh": "投入这些激动人心的游戏，感受动作的核心！",
+        "es": "¡Sumérgete en el corazón de la acción con estos emocionantes juegos!",
+        "fr": "Plongez au cœur de l'action avec ces jeux passionnants !"
       },
-      "racing": {
-          "title": "🏎️ High-Speed Racing",
-          "description": "Put the pedal to the metal and race to victory!",
-          "weight": 80,
-          "games": ["traffic-rider", "racing-limits"]
+      "weight": 100,
+      "games": ["monster-survivors", "7296", "6152", "10144"]
+    },
+    "adventure": {
+      "title": {
+        "en": "🗺️ Epic Adventures",
+        "zh": "🗺️ 史诗级冒险",
+        "es": "🗺️ Aventuras Épicas",
+        "fr": "🗺️ Aventures Épiques"
       },
-      "puzzle": {
-          "title": "🧠 Brain-Teasing Puzzles",
-          "description": "Challenge your mind and solve these clever puzzles.",
-          "weight": 70,
-          "games": ["tetris", "puzzle", "spider", "4865", "7451", "20593"]
-      }
+      "description": {
+        "en": "Embark on epic journeys and explore new worlds.",
+        "zh": "踏上史诗般的旅程，探索新世界。",
+        "es": "Embárcate en viajes épicos y explora nuevos mundos.",
+        "fr": "Embarquez pour des voyages épiques et explorez de nouveaux mondes."
+      },
+      "weight": 90,
+      "games": ["18296", "2178", "2461", "16062", "idle-saga"]
+    },
+    "racing": {
+      "title": {
+        "en": "🏎️ High-Speed Racing",
+        "zh": "🏎️ 极速赛车",
+        "es": "🏎️ Carreras de Alta Velocidad",
+        "fr": "🏎️ Course de Haute Vitesse"
+      },
+      "description": {
+        "en": "Put the pedal to the metal and race to victory!",
+        "zh": "踩下油门，冲向胜利！",
+        "es": "¡Pisa el acelerador a fondo y corre hacia la victoria!",
+        "fr": "Mettez la pédale douce et courez vers la victoire !"
+      },
+      "weight": 80,
+      "games": ["traffic-rider", "racing-limits"]
+    },
+    "puzzle": {
+      "title": {
+        "en": "🧠 Brain-Teasing Puzzles",
+        "zh": "🧠 烧脑益智",
+        "es": "🧠 Rompecabezas Ingeniosos",
+        "fr": "🧠 Casse-tête stimulants"
+      },
+      "description": {
+        "en": "Challenge your mind and solve these clever puzzles.",
+        "zh": "挑战你的思维，解决这些巧妙的谜题。",
+        "es": "Desafía tu mente y resuelve estos ingeniosos rompecabezas.",
+        "fr": "Défiez votre esprit et résolvez ces énigmes intelligentes."
+      },
+      "weight": 70,
+      "games": ["4865", "7451", "20593", "13555"]
+    }
   },
   "games": {
-      "pacman": {
-          "id": "pacman",
-          "title": "Pacman",
-          "description": "A timeless arcade classic where you navigate a maze, eat all the dots, and evade the colorful ghosts!",
-          "instructions": "Use the arrow keys to move Pac-Man. Clear the maze by eating all the small dots. Eating a large Power Pellet allows you to temporarily eat the ghosts for bonus points.",
-          "category": "action",
-          "tags": ["classic", "maze", "arcade"],
-          "weight": 100,
-          "width": 800,
-          "height": 600,
-          "thumb": "img/games/pacman.png",
-          "url": "games/pacman/index.html"
+    "traffic-rider": {
+      "id": "traffic-rider",
+      "title": {
+        "en": "Traffic Rider",
+        "zh": "交通骑手",
+        "es": "Traffic Rider",
+        "fr": "Traffic Rider"
       },
-      "tetris": {
-          "id": "tetris",
-          "title": "Tetris",
-          "description": "The iconic puzzle game of falling blocks. Strategically arrange them to create and clear solid horizontal lines.",
-          "instructions": "Use the arrow keys to move and rotate the falling blocks (Tetriminos). Complete horizontal lines to score points and make space for more blocks. The game ends if the blocks stack up to the top.",
-          "category": "puzzle",
-          "tags": ["classic", "blocks", "strategy"],
-          "weight": 100,
-          "width": 800,
-          "height": 600,
-          "thumb": "img/games/tetris.png",
-          "url": "games/tetris/index.html"
+      "description": {
+        "en": "A fast-paced, first-person motorcycle racing game. Weave through highway traffic, overtake cars, and upgrade your bike.",
+        "zh": "一款快节奏的第一人称摩托车赛车游戏。在高速公路交通中穿梭，超车并升级您的摩托车。",
+        "es": "Un juego de carreras de motos en primera persona de ritmo rápido. Atraviesa el tráfico de la autopista, adelanta a los coches y mejora tu moto.",
+        "fr": "Un jeu de course de moto à la première personne au rythme effréné. Faufilez-vous dans le trafic autoroutier, dépassez les voitures et améliorez votre moto."
       },
-      "snake": {
-          "id": "snake",
-          "title": "Snake",
-          "description": "The classic game of growth and survival. Guide your snake to eat food and grow longer, but don't run into walls or yourself!",
-          "instructions": "Use the arrow keys to change the snake's direction. Eat the food that appears on the screen to grow. The game ends if the snake collides with the edges of the screen or its own body.",
-          "category": "action",
-          "tags": ["classic", "survival", "arcade"],
-          "weight": 90,
-          "width": 800,
-          "height": 600,
-          "thumb": "img/games/snake.png",
-          "url": "games/snake/index.html"
+      "instructions": {
+        "en": "Control your motorcycle to dodge cars and trucks on a busy highway. The closer your overtakes, the more points you score. Earn cash to buy and upgrade new bikes.",
+        "zh": "在繁忙的高速公路上控制您的摩托车躲避汽车和卡车。超车越近，得分越高。赚钱购买和升级新摩托车。",
+        "es": "Controla tu motocicleta para esquivar coches y camiones en una autopista concurrida. Cuanto más cerca adelantes, más puntos obtendrás. Gana dinero para comprar y mejorar nuevas motos.",
+        "fr": "Contrôlez votre moto pour esquiver les voitures et les camions sur une autoroute très fréquentée. Plus vos dépassements sont proches, plus vous marquez de points. Gagnez de l'argent pour acheter et améliorer de nouvelles motos."
       },
-      "defender": {
-          "id": "defender",
-          "title": "Defender",
-          "description": "A classic side-scrolling shooter. Pilot your ship to defend astronauts from waves of alien invaders.",
-          "instructions": "Control your ship and shoot at the alien enemies. Protect the astronauts on the ground. The game requires fast reflexes and strategic positioning.",
-          "category": "action",
-          "tags": ["classic", "shooting", "arcade"],
-          "weight": 90,
-          "width": 800,
-          "height": 600,
-          "thumb": "img/games/defender.png",
-          "url": "games/defender/index.html"
+      "category": "racing",
+      "tags": ["racing", "motorcycle", "action"],
+      "weight": 85,
+      "width": 800,
+      "height": 600,
+      "thumb": "https://imgs.crazygames.com/traffic-rider-vvq_16x9/20250526021507/traffic-rider-vvq_16x9-cover?metadata=none&quality=85&width=273&fit=crop",
+      "url": "https://www.crazygames.com/embed/traffic-rider-vvq"
+    },
+    "racing-limits": {
+      "id": "racing-limits",
+      "title": {
+        "en": "Racing Limits",
+        "zh": "赛车极限",
+        "es": "Racing Limits",
+        "fr": "Racing Limits"
       },
-      "bounce": {
-          "id": "bounce",
-          "title": "Bounce",
-          "description": "A beloved classic from old mobile phones. Guide the red ball through various levels, navigating obstacles and collecting rings.",
-          "instructions": "Use the arrow keys to move the ball left and right, and the up arrow to jump. Navigate through the level's platforms and hazards to reach the exit.",
-          "category": "adventure",
-          "tags": ["classic", "platform", "action"],
-          "weight": 90,
-          "width": 800,
-          "height": 600,
-          "thumb": "img/games/bounce.png",
-          "url": "games/bounce/index.html"
+      "description": {
+        "en": "An arcade racing game that pushes the boundaries of mobile racing with its various exciting game modes.",
+        "zh": "一款街机赛车游戏，通过其各种刺激的游戏模式，突破了移动赛车的界限。",
+        "es": "Un juego de carreras arcade que traspasa los límites de las carreras móviles con sus diversos y emocionantes modos de juego.",
+        "fr": "Un jeu de course d'arcade qui repousse les limites de la course sur mobile avec ses différents modes de jeu passionnants."
       },
-      "puzzle": {
-          "id": "puzzle",
-          "title": "Puzzle",
-          "description": "A relaxing jigsaw puzzle game. Piece together beautiful images and challenge your visual perception.",
-          "instructions": "Drag and drop the puzzle pieces onto the board to assemble the image. Start with the edges and work your way in. There's no time limit, so you can enjoy it at your own pace.",
-          "category": "puzzle",
-          "tags": ["jigsaw", "casual", "brain"],
-          "weight": 80,
-          "width": 800,
-          "height": 600,
-          "thumb": "img/games/puzzle.png",
-          "url": "games/puzzle/index.html"
+      "instructions": {
+        "en": "Choose from modes like Carrier, Infinite, and Free Ride. Drive your car through traffic, earning points for speed and near misses. Use your earnings to customize and upgrade your vehicle.",
+        "zh": "从职业、无限和自由驾驶等模式中选择。驾驶您的汽车穿越交通，通过速度和惊险超车获得积分。用您赚来的钱来定制和升级您的车辆。",
+        "es": "Elige entre modos como Carrier, Infinite y Free Ride. Conduce tu coche a través del tráfico, ganando puntos por velocidad y adelantamientos cercanos. Usa tus ganancias para personalizar y mejorar tu vehículo.",
+        "fr": "Choisissez parmi des modes comme Carrier, Infinite et Free Ride. Conduisez votre voiture dans la circulation, gagnez des points pour la vitesse et les quasi-accidents. Utilisez vos gains pour personnaliser et améliorer votre véhicule."
       },
-      "spider": {
-          "id": "spider",
-          "title": "Spider Solitaire",
-          "description": "A challenging and popular variant of Solitaire. The goal is to build stacks of cards of the same suit, from King down to Ace.",
-          "instructions": "Drag cards to create descending sequences (King, Queen, Jack, etc.). You can move any sequence of the same suit. Complete a full suit from K to A to remove it from the board. Clear all cards to win.",
-          "category": "puzzle",
-          "tags": ["cards", "strategy", "casual"],
-          "weight": 82,
-          "width": 800,
-          "height": 600,
-          "thumb": "img/games/spider.png",
-          "url": "games/spider/index.html"
+      "category": "racing",
+      "tags": ["racing", "cars", "action"],
+      "weight": 85,
+      "width": 800,
+      "height": 600,
+      "thumb": "https://imgs.crazygames.com/racing-limits_16x9/20250418072542/racing-limits_16x9-cover?metadata=none&quality=85&width=273&fit=crop",
+      "url": "https://www.crazygames.com/embed/racing-limits"
+    },
+    "idle-saga": {
+      "id": "idle-saga",
+      "title": {
+        "en": "Idle Saga",
+        "zh": "放置传说",
+        "es": "Idle Saga",
+        "fr": "Idle Saga"
       },
-      "traffic-rider": {
-          "id": "traffic-rider",
-          "title": "Traffic Rider",
-          "description": "A fast-paced, first-person motorcycle racing game. Weave through highway traffic, overtake cars, and upgrade your bike.",
-          "instructions": "Control your motorcycle to dodge cars and trucks on a busy highway. The closer your overtakes, the more points you score. Earn cash to buy and upgrade new bikes.",
-          "category": "racing",
-          "tags": ["racing", "motorcycle", "action"],
-          "weight": 85,
-          "width": 800,
-          "height": 600,
-          "thumb": "https://imgs.crazygames.com/traffic-rider-vvq_16x9/20250526021507/traffic-rider-vvq_16x9-cover?metadata=none&quality=85&width=273&fit=crop",
-          "url": "https://www.crazygames.com/embed/traffic-rider-vvq"
+      "description": {
+        "en": "An incremental RPG where you build a team of heroes who fight for you automatically. Manage upgrades and strategy to progress.",
+        "zh": "一款增量RPG游戏，您可以组建一支英雄团队，他们会自动为您战斗。管理升级和策略以取得进展。",
+        "es": "Un juego de rol incremental en el que creas un equipo de héroes que luchan por ti automáticamente. Gestiona las mejoras y la estrategia para progresar.",
+        "fr": "Un RPG incrémentiel où vous constituez une équipe de héros qui combattent pour vous automatiquement. Gérez les améliorations et la stratégie pour progresser."
       },
-      "racing-limits": {
-          "id": "racing-limits",
-          "title": "Racing Limits",
-          "description": "An arcade racing game that pushes the boundaries of mobile racing with its various exciting game modes.",
-          "instructions": "Choose from modes like Carrier, Infinite, and Free Ride. Drive your car through traffic, earning points for speed and near misses. Use your earnings to customize and upgrade your vehicle.",
-          "category": "racing",
-          "tags": ["racing", "cars", "action"],
-          "weight": 85,
-          "width": 800,
-          "height": 600,
-          "thumb": "https://imgs.crazygames.com/racing-limits_16x9/20250418072542/racing-limits_16x9-cover?metadata=none&quality=85&width=273&fit=crop",
-          "url": "https://www.crazygames.com/embed/racing-limits"
+      "instructions": {
+        "en": "Your heroes fight and earn gold automatically. Use the gold to upgrade your characters and unlock new abilities. Your main role is strategic management to maximize your team's power, even when you're away.",
+        "zh": "您的英雄会自动战斗并赚取金币。使用金币升级您的角色并解锁新能力。您的主要角色是战略管理，以最大限度地提高团队的实力，即使您不在时也是如此。",
+        "es": "Tus héroes luchan y ganan oro automáticamente. Usa el oro para mejorar a tus personajes y desbloquear nuevas habilidades. Tu función principal es la gestión estratégica para maximizar el poder de tu equipo, incluso cuando no estás.",
+        "fr": "Vos héros combattent et gagnent de l'or automatiquement. Utilisez l'or pour améliorer vos personnages et débloquer de nouvelles capacités. Votre rôle principal est la gestion stratégique pour maximiser la puissance de votre équipe, même lorsque vous êtes absent."
       },
-      "idle-saga": {
-          "id": "idle-saga",
-          "title": "Idle Saga",
-          "description": "An incremental RPG where you build a team of heroes who fight for you automatically. Manage upgrades and strategy to progress.",
-          "instructions": "Your heroes fight and earn gold automatically. Use the gold to upgrade your characters and unlock new abilities. Your main role is strategic management to maximize your team's power, even when you're away.",
-          "category": "adventure",
-          "tags": ["idle", "rpg", "strategy"],
-          "width": 800,
-          "height": 600,
-          "thumb": "https://imgs.crazygames.com/idle-saga_16x9/20250305045349/idle-saga_16x9-cover?metadata=none&quality=85&width=273&fit=crop",
-          "url": "https://www.crazygames.com/embed/idle-saga"
+      "category": "adventure",
+      "tags": ["idle", "rpg", "strategy"],
+      "width": 800,
+      "height": 600,
+      "thumb": "https://imgs.crazygames.com/idle-saga_16x9/20250305045349/idle-saga_16x9-cover?metadata=none&quality=85&width=273&fit=crop",
+      "url": "https://www.crazygames.com/embed/idle-saga"
+    },
+    "monster-survivors": {
+      "id": "monster-survivors",
+      "title": {
+        "en": "Monster Survivors",
+        "zh": "怪物幸存者",
+        "es": "Monster Survivors",
+        "fr": "Monster Survivors"
       },
-      "monster-survivors": {
-          "id": "monster-survivors",
-          "title": "Monster Survivors",
-          "description": "A survival game with rogue-lite elements. Face relentless waves of monsters, choose upgrades, and survive as long as you can.",
-          "instructions": "Your character attacks automatically. Your job is to move around to evade hordes of monsters. When you level up, choose from a selection of new weapons and passive upgrades to create powerful synergies.",
-          "category": "action",
-          "tags": ["survival", "roguelike", "action"],
-          "weight": 88,
-          "width": 800,
-          "height": 600,
-          "thumb": "img/games/monster-survivors.png",
-          "url": "https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
+      "description": {
+        "en": "A survival game with rogue-lite elements. Face relentless waves of monsters, choose upgrades, and survive as long as you can.",
+        "zh": "一款带有rogue-lite元素的生存游戏。面对无情的怪物浪潮，选择升级，并尽可能长时间地生存下去。",
+        "es": "Un juego de supervivencia con elementos rogue-lite. Enfréntate a oleadas implacables de monstruos, elige mejoras y sobrevive todo el tiempo que puedas.",
+        "fr": "Un jeu de survie avec des éléments rogue-lite. Affrontez des vagues incessantes de monstres, choisissez des améliorations et survivez aussi longtemps que vous le pouvez."
       },
-      "one-falls-all-fall": {
-          "id": "one-falls-all-fall",
-          "title": "One Falls, All Fall",
-          "description": "A challenging game of coordination and survival. Control two characters simultaneously across different lanes, and if one fails, the game is over.",
-          "instructions": "Tap the screen to make the characters jump over obstacles in their respective lanes. You must pay attention to both characters at once. The game tests your multitasking skills as any single mistake ends the run.",
-          "category": "action",
-          "tags": ["skill", "reflex", "arcade"],
-          "weight": 80,
-          "width": 800,
-          "height": 600,
-          "thumb": "img/games/one-falls-all-fall.png",
-          "url": "games/one-falls-all-fall/index.html"
+      "instructions": {
+        "en": "Your character attacks automatically. Your job is to move around to evade hordes of monsters. When you level up, choose from a selection of new weapons and passive upgrades to create powerful synergies.",
+        "zh": "您的角色会自动攻击。您的工作是四处移动以躲避成群的怪物。升级时，从一系列新武器和被动升级中进行选择，以创造强大的协同效应。",
+        "es": "Tu personaje ataca automáticamente. Tu trabajo es moverte para evadir hordas de monstruos. Cuando subes de nivel, eliges entre una selección de nuevas armas y mejoras pasivas para crear poderosas sinergias.",
+        "fr": "Votre personnage attaque automatiquement. Votre travail consiste à vous déplacer pour échapper aux hordes de monstres. Lorsque vous montez de niveau, choisissez parmi une sélection de nouvelles armes et d'améliorations passives pour créer de puissantes synergies."
       },
-      "18296": {
-          "id": "18296",
-          "title": "ZigZag Snow Mountain",
-          "description": "Just Freeskiing is a highly authentic ski/freeski simulation with sheer endless possibilities to tweak, style and combine realistic tricks!",
-          "instructions": "Mouse Control",
-          "url": "https://html5.gamemonetize.com/s94xp6bhitgjcptd98dyph9u5m7i922m/",
-          "category": "adventure",
-          "tags": [".io Games", "2 Player Games", "3D Games", "Adventure", "Arcade", "Casual", "drifting", "Fun", "Hypercasual", "Island", "Snow"],
-          "weight": 78,
-          "thumb": "https://img.gamemonetize.com/s94xp6bhitgjcptd98dyph9u5m7i922m/512x384.jpg",
-          "width": "800",
-          "height": "600"
+      "category": "action",
+      "tags": ["survival", "roguelike", "action"],
+      "weight": 88,
+      "width": 800,
+      "height": 600,
+      "thumb": "img/games/monster-survivors.png",
+      "url": "https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
+    },
+    "18296": {
+      "id": "18296",
+      "title": {
+        "en": "ZigZag Snow Mountain",
+        "zh": "之字形雪山",
+        "es": "ZigZag Snow Mountain",
+        "fr": "ZigZag Snow Mountain"
       },
-      "4865": {
-          "id": "4865",
-          "title": "Hero Rescue Puzzle",
-          "description": "Do you like rescue games? Of course, they are great. Help the hero rescue to save the princess and get the treasure in the new hero wars game - Hero Rescue.",
-          "instructions": "Mouse control",
-          "url": "https://html5.gamemonetize.com/3596x93682lmj4cn7mrtldmfhviig7jj/",
-          "category": "puzzle",
-          "tags": ["Action", "Boys", "Fun", "Girls", "HTML5", "Logic", "Puzzle"],
-          "weight": 75,
-          "thumb": "https://img.gamemonetize.com/3596x93682lmj4cn7mrtldmfhviig7jj/512x384.jpg",
-          "width": "800",
-          "height": "600"
+      "description": {
+        "en": "Just Freeskiing is a highly authentic ski/freeski simulation with sheer endless possibilities to tweak, style and combine realistic tricks!",
+        "zh": "Just Freeskiing 是一款高度真实的滑雪/自由式滑雪模拟游戏，具有无穷无尽的可能性来调整、设计和组合逼真的技巧！",
+        "es": "¡Just Freeskiing es una simulación de esquí/freeski muy auténtica con infinitas posibilidades para ajustar, estilizar y combinar trucos realistas!",
+        "fr": "Just Freeskiing est une simulation de ski/freeski très authentique avec des possibilités infinies pour peaufiner, styliser et combiner des figures réalistes !"
       },
-      "7451": {
-          "id": "7451",
-          "title": "Love Balls 2D",
-          "description": "It's time to use your brain and find a way to bump the balls! The rule's easy, just draw lines or shapes to bump the balls, you will need your wisdom and imagination.",
-          "instructions": "Use mouse to play",
-          "url": "https://html5.gamemonetize.com/1l6pgl750zi41o2cktmkmr71dntshaej/",
-          "category": "puzzle",
-          "tags": ["Adventure", "Arcade", "Ball", "Love", "Puzzle"],
-          "weight": 75,
-          "thumb": "https://img.gamemonetize.com/1l6pgl750zi41o2cktmkmr71dntshaej/512x384.jpg",
-          "width": "900",
-          "height": "600"
+      "instructions": {
+        "en": "Mouse Control",
+        "zh": "鼠标控制",
+        "es": "Control del ratón",
+        "fr": "Contrôle de la souris"
       },
-      "20593": {
-          "id": "20593",
-          "title": "Happy Glass : Fill the Glass by Draw Lines",
-          "description": "Simply Filling Happy Glass with Draw Lines, Make a Crow Happy Try to find the best way to complete each level.",
-          "instructions": "- Draw Lines with Mouse Left Click",
-          "url": "https://html5.gamemonetize.com/dayksem3hjbea9vsbklh6wqi213w9121/",
-          "category": "puzzle",
-          "tags": ["Boys", "Click", "Draw", "Games", "Girls", "HTML", "HTML5"],
-          "weight": 72,
-          "thumb": "https://img.gamemonetize.com/dayksem3hjbea9vsbklh6wqi213w9121/512x384.jpg",
-          "width": "600",
-          "height": "900"
+      "url": "https://html5.gamemonetize.com/s94xp6bhitgjcptd98dyph9u5m7i922m/",
+      "category": "adventure",
+      "tags": [".io Games", "2 Player Games", "3D Games", "Adventure", "Arcade", "Casual", "drifting", "Fun", "Hypercasual", "Island", "Snow"],
+      "weight": 78,
+      "thumb": "https://img.gamemonetize.com/s94xp6bhitgjcptd98dyph9u5m7i922m/512x384.jpg",
+      "width": "800",
+      "height": "600"
+    },
+    "4865": {
+      "id": "4865",
+      "title": {
+        "en": "Hero Rescue Puzzle",
+        "zh": "英雄救援谜题",
+        "es": "Hero Rescue Puzzle",
+        "fr": "Hero Rescue Puzzle"
       },
-      "13555": {
-          "id": "13555",
-          "title": "Pou Online",
-          "description": "Do you have what it takes to take care of your very own alien pet? Feed and take care of Pou.",
-          "instructions": "Mouse control",
-          "url": "https://html5.gamemonetize.com/jyeazqa0x7ym5xcq22g9mgv74s5tift1/",
-          "category": "puzzle",
-          "tags": ["Boys", "Girls", "HTML5"],
-          "thumb": "https://img.gamemonetize.com/jyeazqa0x7ym5xcq22g9mgv74s5tift1/512x384.jpg",
-          "width": "800",
-          "height": "600"
+      "description": {
+        "en": "Do you like rescue games? Of course, they are great. Help the hero rescue to save the princess and get the treasure in the new hero wars game - Hero Rescue.",
+        "zh": "你喜欢救援游戏吗？当然，它们很棒。在新英雄战争游戏-英雄救援中，帮助英雄救援公主并获得宝藏。",
+        "es": "¿Te gustan los juegos de rescate? Por supuesto, son geniales. Ayuda al héroe a rescatar a la princesa y conseguir el tesoro en el nuevo juego de guerra de héroes: Hero Rescue.",
+        "fr": "Aimez-vous les jeux de sauvetage ? Bien sûr, ils sont super. Aidez le héros à sauver la princesse et à obtenir le trésor dans le nouveau jeu de guerres de héros - Hero Rescue."
       },
-      "7296": {
-          "id": "7296",
-          "title": "Zombie Bears Night Shooting",
-          "description": "Zombies walk among us! You are one of the few survivors of a pandemic infection.",
-          "instructions": "Mouse control",
-          "url": "https://html5.gamemonetize.com/a8i3hhixhynwz435k72ub0ichgummyfw/",
-          "category": "action",
-          "tags": ["2D", "Adventure", "Fight", "Unity3D", "Zombie"],
-          "weight": 70,
-          "thumb": "https://img.gamemonetize.com/a8i3hhixhynwz435k72ub0ichgummyfw/512x384.jpg",
-          "width": "900",
-          "height": "600"
+      "instructions": {
+        "en": "Mouse control",
+        "zh": "鼠标控制",
+        "es": "Control del ratón",
+        "fr": "Contrôle de la souris"
       },
-      "10144": {
-          "id": "10144",
-          "title": "Roof Rails - Color Stack 3D",
-          "description": "Welcome to play roof rails 3d games of 2021 with fat pusher giant shortcut rush run 3d.",
-          "instructions": "Keyboard control",
-          "url": "https://html5.gamemonetize.com/3zsuu4fl12ujvfaa5yett2t1rclzg9jj/",
-          "category": "action",
-          "tags": [".io Games", "3D", "Adventure", "Arcade", "Train"],
-          "weight": 70,
-          "thumb": "https://img.gamemonetize.com/3zsuu4fl12ujvfaa5yett2t1rclzg9jj/512x384.jpg",
-          "width": "600",
-          "height": "900"
+      "url": "https://html5.gamemonetize.com/3596x93682lmj4cn7mrtldmfhviig7jj/",
+      "category": "puzzle",
+      "tags": ["Action", "Boys", "Fun", "Girls", "HTML5", "Logic", "Puzzle"],
+      "weight": 75,
+      "thumb": "https://img.gamemonetize.com/3596x93682lmj4cn7mrtldmfhviig7jj/512x384.jpg",
+      "width": "800",
+      "height": "600"
+    },
+    "7451": {
+      "id": "7451",
+      "title": {
+        "en": "Love Balls 2D",
+        "zh": "爱心球2D",
+        "es": "Love Balls 2D",
+        "fr": "Love Balls 2D"
       },
-      "6152": {
-          "id": "6152",
-          "title": "Among Us Online Edition",
-          "description": "Welcome to game Among Us Online Edition - game based on Among Us, but in this game you can play only solo and as imposter on the space ship.",
-          "instructions": "Use mouse to play",
-          "url": "https://html5.gamemonetize.com/luye5rleios737wp2o9wjq7h577gl937/",
-          "category": "action",
-          "tags": ["1 Player", "Action", "Arcade", "Multiplayer", "Shooter"],
-          "weight": 95,
-          "thumb": "https://img.gamemonetize.com/luye5rleios737wp2o9wjq7h577gl937/512x384.jpg",
-          "width": "800",
-          "height": "600"
+      "description": {
+        "en": "It's time to use your brain and find a way to bump the balls! The rule's easy, just draw lines or shapes to bump the balls, you will need your wisdom and imagination.",
+        "zh": "是时候动动脑筋，想办法让球碰撞了！规则很简单，只需画线或形状让球碰撞，您将需要您的智慧和想象力。",
+        "es": "¡Es hora de usar tu cerebro y encontrar una manera de chocar las bolas! La regla es fácil, solo dibuja líneas o formas para chocar las bolas, necesitarás tu sabiduría e imaginación.",
+        "fr": "Il est temps d'utiliser votre cerveau et de trouver un moyen de faire se rencontrer les balles ! La règle est simple, il suffit de dessiner des lignes ou des formes pour faire se rencontrer les balles, vous aurez besoin de votre sagesse et de votre imagination."
       },
-      "2178": {
-          "id": "2178",
-          "title": "Minecraft Remake",
-          "description": "Classic minecraft game! Explore infinite worlds and build everything from the simplest of homes to the grandest of castles.",
-          "instructions": "WASD or Arrow Keys Move",
-          "url": "https://html5.gamemonetize.com/cznxajp3hzb8l7gtebaq96s0pbrfa33m/",
-          "category": "adventure",
-          "tags": ["3D", "Adventure", "Craft", "Minecraft", "Unity3D"],
-          "weight": 98,
-          "thumb": "https://img.gamemonetize.com/cznxajp3hzb8l7gtebaq96s0pbrfa33m/512x384.jpg",
-          "width": "960",
-          "height": "600"
+      "instructions": {
+        "en": "Use mouse to play",
+        "zh": "使用鼠标玩",
+        "es": "Usa el ratón para jugar",
+        "fr": "Utilisez la souris pour jouer"
       },
-      "2461": {
-          "id": "2461",
-          "title": "Baldi's Basics v1.4.3",
-          "description": "Baldi's Basics v1.4.3 - Inspired by creepy/bad edutainment games from the 90s.",
-          "instructions": "WASD - Move Shift - Run",
-          "url": "https://html5.gamemonetize.com/iiifrxhcnzl5laslqf3eaedtevjzb2bu/",
-          "category": "adventure",
-          "tags": ["3D", "Fun", "HTML5", "Math", "WebGL"],
-          "weight": 65,
-          "thumb": "https://img.gamemonetize.com/iiifrxhcnzl5laslqf3eaedtevjzb2bu/512x384.jpg",
-          "width": "900",
-          "height": "600"
+      "url": "https://html5.gamemonetize.com/1l6pgl750zi41o2cktmkmr71dntshaej/",
+      "category": "puzzle",
+      "tags": ["Adventure", "Arcade", "Ball", "Love", "Puzzle"],
+      "weight": 75,
+      "thumb": "https://img.gamemonetize.com/1l6pgl750zi41o2cktmkmr71dntshaej/512x384.jpg",
+      "width": "900",
+      "height": "600"
+    },
+    "20593": {
+      "id": "20593",
+      "title": {
+        "en": "Happy Glass : Fill the Glass by Draw Lines",
+        "zh": "快乐玻璃杯：画线填满玻璃杯",
+        "es": "Happy Glass : Fill the Glass by Draw Lines",
+        "fr": "Happy Glass : Fill the Glass by Draw Lines"
       },
-      "16062": {
-          "id": "16062",
-          "title": "Talking Tom Gold Run Online",
-          "description": "Talking Tom Gold Run Online is the best cat running game. Enjoy hours of fun with your loved cat, run to collect gold coins after being robbed in this endless runner game!",
-          "instructions": "Tap or click",
-          "url": "https://html5.gamemonetize.com/hn5dh0x6wcnroy3p33ogeyu5z6xsltvw/",
-          "category": "adventure",
-          "tags": ["Action", "Adventure", "Animal", "Boy", "Boys", "Cat", "Collecting", "Collection", "H5", "HTML5", "run"],
-          "weight": 60,
-          "thumb": "https://img.gamemonetize.com/hn5dh0x6wcnroy3p33ogeyu5z6xsltvw/512x384.jpg",
-          "width": "644",
-          "height": "644"
-      }
+      "description": {
+        "en": "Simply Filling Happy Glass with Draw Lines, Make a Crow Happy Try to find the best way to complete each level.",
+        "zh": "只需用画线填满快乐玻璃杯，让乌鸦开心。尝试找到完成每个级别的最佳方法。",
+        "es": "Simplemente llenando Happy Glass con Draw Lines, haz feliz a un cuervo. Intenta encontrar la mejor manera de completar cada nivel.",
+        "fr": "Remplissez simplement Happy Glass avec des lignes de dessin, rendez un corbeau heureux. Essayez de trouver la meilleure façon de terminer chaque niveau."
+      },
+      "instructions": {
+        "en": "- Draw Lines with Mouse Left Click",
+        "zh": "- 用鼠标左键画线",
+        "es": "- Dibuja líneas con el clic izquierdo del ratón",
+        "fr": "- Dessinez des lignes avec le clic gauche de la souris"
+      },
+      "url": "https://html5.gamemonetize.com/dayksem3hjbea9vsbklh6wqi213w9121/",
+      "category": "puzzle",
+      "tags": ["Boys", "Click", "Draw", "Games", "Girls", "HTML", "HTML5"],
+      "weight": 72,
+      "thumb": "https://img.gamemonetize.com/dayksem3hjbea9vsbklh6wqi213w9121/512x384.jpg",
+      "width": "600",
+      "height": "900"
+    },
+    "13555": {
+      "id": "13555",
+      "title": {
+        "en": "Pou Online",
+        "zh": "Pou在线",
+        "es": "Pou Online",
+        "fr": "Pou Online"
+      },
+      "description": {
+        "en": "Do you have what it takes to take care of your very own alien pet? Feed and take care of Pou.",
+        "zh": "您有能力照顾自己的外星宠物吗？喂养并照顾Pou。",
+        "es": "¿Tienes lo que se necesita para cuidar de tu propia mascota alienígena? Alimenta y cuida a Pou.",
+        "fr": "Avez-vous ce qu'il faut pour prendre soin de votre propre animal de compagnie extraterrestre ? Nourrissez et prenez soin de Pou."
+      },
+      "instructions": {
+        "en": "Mouse control",
+        "zh": "鼠标控制",
+        "es": "Control del ratón",
+        "fr": "Contrôle de la souris"
+      },
+      "url": "https://html5.gamemonetize.com/jyeazqa0x7ym5xcq22g9mgv74s5tift1/",
+      "category": "puzzle",
+      "tags": ["Boys", "Girls", "HTML5"],
+      "thumb": "https://img.gamemonetize.com/jyeazqa0x7ym5xcq22g9mgv74s5tift1/512x384.jpg",
+      "width": "800",
+      "height": "600"
+    },
+    "7296": {
+      "id": "7296",
+      "title": {
+        "en": "Zombie Bears Night Shooting",
+        "zh": "僵尸熊夜间射击",
+        "es": "Zombie Bears Night Shooting",
+        "fr": "Zombie Bears Night Shooting"
+      },
+      "description": {
+        "en": "Zombies walk among us! You are one of the few survivors of a pandemic infection.",
+        "zh": "僵尸在我们中间行走！您是大流行病感染的少数幸存者之一。",
+        "es": "¡Los zombis caminan entre nosotros! Eres uno de los pocos supervivientes de una infección pandémica.",
+        "fr": "Les zombies marchent parmi nous ! Vous êtes l'un des rares survivants d'une infection pandémique."
+      },
+      "instructions": {
+        "en": "Mouse control",
+        "zh": "鼠标控制",
+        "es": "Control del ratón",
+        "fr": "Contrôle de la souris"
+      },
+      "url": "https://html5.gamemonetize.com/a8i3hhixhynwz435k72ub0ichgummyfw/",
+      "category": "action",
+      "tags": ["2D", "Adventure", "Fight", "Unity3D", "Zombie"],
+      "weight": 70,
+      "thumb": "https://img.gamemonetize.com/a8i3hhixhynwz435k72ub0ichgummyfw/512x384.jpg",
+      "width": "900",
+      "height": "600"
+    },
+    "10144": {
+      "id": "10144",
+      "title": {
+        "en": "Roof Rails - Color Stack 3D",
+        "zh": "屋顶栏杆-颜色堆栈3D",
+        "es": "Roof Rails - Color Stack 3D",
+        "fr": "Roof Rails - Color Stack 3D"
+      },
+      "description": {
+        "en": "Welcome to play roof rails 3d games of 2021 with fat pusher giant shortcut rush run 3d.",
+        "zh": "欢迎玩2021年的屋顶栏杆3D游戏，其中包括胖子推手巨人捷径冲刺3D。",
+        "es": "Bienvenido a jugar a los juegos 3d de barandillas de techo de 2021 con fat pusher giant shortcut rush run 3d.",
+        "fr": "Bienvenue pour jouer aux jeux 3d de rails de toit de 2021 avec fat pusher giant raccourci rush run 3d."
+      },
+      "instructions": {
+        "en": "Keyboard control",
+        "zh": "键盘控制",
+        "es": "Control del teclado",
+        "fr": "Contrôle du clavier"
+      },
+      "url": "https://html5.gamemonetize.com/3zsuu4fl12ujvfaa5yett2t1rclzg9jj/",
+      "category": "action",
+      "tags": [".io Games", "3D", "Adventure", "Arcade", "Train"],
+      "weight": 70,
+      "thumb": "https://img.gamemonetize.com/3zsuu4fl12ujvfaa5yett2t1rclzg9jj/512x384.jpg",
+      "width": "600",
+      "height": "900"
+    },
+    "6152": {
+      "id": "6152",
+      "title": {
+        "en": "Among Us Online Edition",
+        "zh": "Among Us在线版",
+        "es": "Among Us Online Edition",
+        "fr": "Among Us Online Edition"
+      },
+      "description": {
+        "en": "Welcome to game Among Us Online Edition - game based on Among Us, but in this game you can play only solo and as imposter on the space ship.",
+        "zh": "欢迎来到游戏Among Us在线版-基于Among Us的游戏，但在此游戏中，您只能在太空船上单人扮演伪装者。",
+        "es": "Bienvenido al juego Among Us Online Edition, un juego basado en Among Us, pero en este juego solo puedes jugar en solitario y como impostor en la nave espacial.",
+        "fr": "Bienvenue dans le jeu Among Us Online Edition - un jeu basé sur Among Us, mais dans ce jeu, vous ne pouvez jouer qu'en solo et en tant qu'imposteur sur le vaisseau spatial."
+      },
+      "instructions": {
+        "en": "Use mouse to play",
+        "zh": "使用鼠标玩",
+        "es": "Usa el ratón para jugar",
+        "fr": "Utilisez la souris pour jouer"
+      },
+      "url": "https://html5.gamemonetize.com/luye5rleios737wp2o9wjq7h577gl937/",
+      "category": "action",
+      "tags": ["1 Player", "Action", "Arcade", "Multiplayer", "Shooter"],
+      "weight": 95,
+      "thumb": "https://img.gamemonetize.com/luye5rleios737wp2o9wjq7h577gl937/512x384.jpg",
+      "width": "800",
+      "height": "600"
+    },
+    "2178": {
+      "id": "2178",
+      "title": {
+        "en": "Minecraft Remake",
+        "zh": "我的世界重制版",
+        "es": "Minecraft Remake",
+        "fr": "Minecraft Remake"
+      },
+      "description": {
+        "en": "Classic minecraft game! Explore infinite worlds and build everything from the simplest of homes to the grandest of castles.",
+        "zh": "经典的我的世界游戏！探索无限的世界，建造从最简单的家园到最宏伟的城堡的一切。",
+        "es": "¡El clásico juego de Minecraft! Explora mundos infinitos y construye de todo, desde las casas más sencillas hasta los castillos más grandiosos.",
+        "fr": "Jeu classique de Minecraft ! Explorez des mondes infinis et construisez tout, des maisons les plus simples aux châteaux les plus grandioses."
+      },
+      "instructions": {
+        "en": "WASD or Arrow Keys Move",
+        "zh": "WASD或箭头键移动",
+        "es": "WASD o teclas de flecha para moverse",
+        "fr": "Déplacement avec les touches ZQSD ou les flèches"
+      },
+      "url": "https://html5.gamemonetize.com/cznxajp3hzb8l7gtebaq96s0pbrfa33m/",
+      "category": "adventure",
+      "tags": ["3D", "Adventure", "Craft", "Minecraft", "Unity3D"],
+      "weight": 98,
+      "thumb": "https://img.gamemonetize.com/cznxajp3hzb8l7gtebaq96s0pbrfa33m/512x384.jpg",
+      "width": "960",
+      "height": "600"
+    },
+    "2461": {
+      "id": "2461",
+      "title": {
+        "en": "Baldi's Basics v1.4.3",
+        "zh": "Baldi的基础 v1.4.3",
+        "es": "Baldi's Basics v1.4.3",
+        "fr": "Baldi's Basics v1.4.3"
+      },
+      "description": {
+        "en": "Baldi's Basics v1.4.3 - Inspired by creepy/bad edutainment games from the 90s.",
+        "zh": "Baldi的基础 v1.4.3 - 灵感来自90年代的恐怖/糟糕的教育娱乐游戏。",
+        "es": "Baldi's Basics v1.4.3 - Inspirado en los espeluznantes/malos juegos educativos de los 90.",
+        "fr": "Baldi's Basics v1.4.3 - Inspiré des jeux ludo-éducatifs effrayants/mauvais des années 90."
+      },
+      "instructions": {
+        "en": "WASD - Move Shift - Run",
+        "zh": "WASD-移动 Shift-奔跑",
+        "es": "WASD - Mover Shift - Correr",
+        "fr": "ZQSD - Déplacer Maj - Courir"
+      },
+      "url": "https://html5.gamemonetize.com/iiifrxhcnzl5laslqf3eaedtevjzb2bu/",
+      "category": "adventure",
+      "tags": ["3D", "Fun", "HTML5", "Math", "WebGL"],
+      "weight": 65,
+      "thumb": "https://img.gamemonetize.com/iiifrxhcnzl5laslqf3eaedtevjzb2bu/512x384.jpg",
+      "width": "900",
+      "height": "600"
+    },
+    "16062": {
+      "id": "16062",
+      "title": {
+        "en": "Talking Tom Gold Run Online",
+        "zh": "会说话的汤姆猫黄金跑酷在线",
+        "es": "Talking Tom Gold Run Online",
+        "fr": "Talking Tom Gold Run Online"
+      },
+      "description": {
+        "en": "Talking Tom Gold Run Online is the best cat running game. Enjoy hours of fun with your loved cat, run to collect gold coins after being robbed in this endless runner game!",
+        "zh": "会说话的汤姆猫黄金跑酷在线是最好的猫咪跑酷游戏。与您心爱的猫咪一起享受数小时的乐趣，在这个无尽的跑酷游戏中被抢劫后奔跑收集金币！",
+        "es": "Talking Tom Gold Run Online es el mejor juego de carreras de gatos. ¡Disfruta de horas de diversión con tu amado gato, corre a recoger monedas de oro después de que te roben en este juego de corredor sin fin!",
+        "fr": "Talking Tom Gold Run Online est le meilleur jeu de course de chat. Profitez d'heures de plaisir avec votre chat bien-aimé, courez pour collecter des pièces d'or après avoir été volé dans ce jeu de course sans fin !"
+      },
+      "instructions": {
+        "en": "Tap or click",
+        "zh": "点击或点按",
+        "es": "Toca o haz clic",
+        "fr": "Appuyez ou cliquez"
+      },
+      "url": "https://html5.gamemonetize.com/hn5dh0x6wcnroy3p33ogeyu5z6xsltvw/",
+      "category": "adventure",
+      "tags": ["Action", "Adventure", "Animal", "Boy", "Boys", "Cat", "Collecting", "Collection", "H5", "HTML5", "run"],
+      "weight": 60,
+      "thumb": "https://img.gamemonetize.com/hn5dh0x6wcnroy3p33ogeyu5z6xsltvw/512x384.jpg",
+      "width": "644",
+      "height": "644"
+    }
   }
 } 

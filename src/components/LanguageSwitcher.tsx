@@ -45,8 +45,8 @@ export function LanguageSwitcher({
             href={`/${locale}/${pathnameWithoutLocale}`}
             className={`text-sm ${
               locale === currentLocale
-                ? 'font-bold text-blue-600'
-                : 'text-gray-600 hover:text-gray-900'
+                ? 'font-bold'
+                : 'text-gray-600 '
             }`}
           >
             {localeNames[locale]}
@@ -59,13 +59,13 @@ export function LanguageSwitcher({
   return (
     <div className="relative" ref={dropdownRef}>
       <button 
-        className="flex items-center space-x-1 px-3 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100"
+        className="flex items-center space-x-1 px-3 py-2 text-sm text-gray-300 rounded-md border border-gray-600 hover:text-white hover:border-gray-400"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>{localeNames[currentLocale]}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          className={`h-4 w-4 text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -81,13 +81,13 @@ export function LanguageSwitcher({
       
       {/* 下拉菜单 */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
+        <div className="absolute right-0 mt-2 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg py-1 z-10">
           {locales.map((locale) => (
             <Link
               key={locale}
               href={`/${locale}/${pathnameWithoutLocale}`}
-              className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${
-                locale === currentLocale ? 'font-bold bg-gray-50' : ''
+              className={`block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white ${
+                locale === currentLocale ? 'font-bold text-white bg-gray-900' : ''
               }`}
               onClick={() => setIsOpen(false)}
             >

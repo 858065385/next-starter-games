@@ -20,55 +20,43 @@ export function Footer({ locale, messages }: FooterProps) {
     getTranslation(messages, path, defaultValue);
   
   return (
-    <footer className="bg-gray-100 py-8 mt-auto border-t">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* 版权信息 */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Multilingual App</h3>
-            <p className="text-gray-600">
-              {t('footer.copyright', '© 2025 Multilingual App. All rights reserved.')}
-            </p>
-          </div>
+    <footer className=" py-8 mt-auto border-t-[#333] border-t-1">
+      <div className="container mx-auto px-4 flex   items-center justify-center" >
+                <Link href={`/${locale}/privacy`} className="text-gray-600 hover:underline">
+                  {t('footer.privacy', 'Privacy Policy')}
+                </Link>
+                <Link href={`/${locale}/about`} className="text-gray-600 ml-[10px] hover:underline">
+                  {t('footer.about', 'About Us')}
+                </Link>
+                </div>
+      {/* <div className="container mx-auto px-4 flex flex-col items-center">
+        <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-8 md:gap-16 mb-8">
           
-          {/* 链接 */}
-          <div>
+         
+          <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold mb-4">Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href={`/${locale}/privacy`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`/${locale}/privacy`} className="text-gray-600">
                   {t('footer.privacy', 'Privacy Policy')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/terms`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.terms', 'Terms of Service')}
+                <Link href={`/${locale}/about`} className="text-gray-600">
+                  {t('footer.about', 'About Us')}
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
           
-          {/* 联系方式 */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">
-              {t('footer.contact', 'Contact Us')}
-            </h3>
-            <address className="not-italic text-gray-600">
-              <a href="mailto:info@multilingual-app.com" className="hover:text-gray-900">
-                info@multilingual-app.com
-              </a>
-            </address>
-          </div>
-          
-          {/* 语言切换 */}
-          <div>
+         
+          {/* <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold mb-4">
               {t('footer.language', 'Language')}
             </h3>
             <LanguageSwitcher variant="horizontal" />
-          </div>
-        </div>
-      </div>
+          </div> */}
+        
     </footer>
   )
 } 
