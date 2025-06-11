@@ -1,0 +1,78 @@
+'use client'
+
+import Link from 'next/link'
+import { useParams, usePathname } from 'next/navigation'
+import { Locale, locales, localeNames } from '@/app/config/i18n'
+
+/**
+ * 语言切换器组件
+ * 用于切换网站语言
+ */
+export function LanguageSwitcher({
+  variant = 'dropdown',
+}: {
+  variant?: 'dropdown' | 'horizontal'
+}) {
+  const pathname = usePathname()
+  const { locale: currentLocale } = useParams() as { locale: Locale }
+  
+  // 提取当前路径中的语言代码后的部分
+  const pathnameWithoutLocale = pathname.split('/').slice(2).join('/')
+  
+  if (variant === 'horizontal') {
+    return (
+      <div className="flex items-center space-x-4">
+        {locales.map((locale) => (
+          <Link
+            key={locale}
+            href={`/${locale}/${pathnameWithoutLocale}`}
+            className={`text-sm ${
+              locale === currentLocale
+                ? 'font-bold text-blue-600'
+                : 'text-gray-600 hover:text-gray-900'
+            }`}
+          >
+            {localeNames[locale]}
+          </Link>
+        ))}
+      </div>
+    )
+  }
+  
+  return (
+    <div className="relative group">
+      <button className="flex items-center space-x-1 px-3 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100">
+        <span>{localeNames[currentLocale]}</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-4 w-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+      
+      {/* 下拉菜单 */}
+      <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden group-hover:block z-10">
+        {locales.map((locale) => (
+          <Link
+            key={locale}
+            href={`/${locale}/${pathnameWithoutLocale}`}
+            className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${
+              locale === currentLocale ? 'font-bold bg-gray-50' : ''
+            }`}
+          >
+            {localeNames[locale]}
+          </Link>
+        ))}
+      </div>
+    </div>
+  )
+} 

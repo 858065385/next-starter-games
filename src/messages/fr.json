@@ -1,0 +1,41 @@
+{
+  "home": {
+    "title": "Bienvenue sur notre site web multilingue",
+    "description": "Ceci est un site web multilingue construit avec Next.js",
+    "cta": "Commencer"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "products": "Produits",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "À Propos de Nous",
+    "description": "En savoir plus sur notre entreprise et notre mission.",
+    "history": "Notre entreprise a été fondée en 2023 avec pour mission de créer des sites web multilingues exceptionnels.",
+    "team": "Notre Équipe",
+    "teamDescription": "Nous avons une équipe dédiée de développeurs, designers et créateurs de contenu."
+  },
+  "products": {
+    "title": "Nos Produits",
+    "description": "Explorez notre gamme de produits et services.",
+    "featuredProducts": "Produits en Vedette",
+    "allProducts": "Tous les Produits",
+    "categories": "Catégories",
+    "buyNow": "Acheter Maintenant"
+  },
+  "footer": {
+    "copyright": "© 2025 Mon Application Multilingue. Tous droits réservés.",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "contact": "Contactez-Nous"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer",
+    "readMore": "Lire Plus",
+    "backToHome": "Retour à l'Accueil"
+  }
+} 

@@ -1,0 +1,59 @@
+{
+  "home": {
+    "title": "欢迎访问我们的多语言网站",
+    "description": "这是一个使用Next.js构建的多语言网站",
+    "cta": "开始使用"
+  },
+  "navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "products": "产品",
+    "contact": "联系我们"
+  },
+  "about": {
+    "title": "关于我们",
+    "description": "了解更多关于我们公司和使命。",
+    "history": "我们公司成立于2023年，使命是构建卓越的多语言网站。",
+    "team": "我们的团队",
+    "teamDescription": "我们拥有一支专业的开发人员、设计师和内容创作者团队。"
+  },
+  "products": {
+    "title": "我们的产品",
+    "description": "探索我们的产品和服务范围。",
+    "featuredProducts": "精选产品",
+    "allProducts": "所有产品",
+    "categories": "分类",
+    "buyNow": "立即购买"
+  },
+  "footer": {
+    "copyright": "© 2025 多语言应用。保留所有权利。",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "contact": "联系我们"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "发生错误",
+    "retry": "重试",
+    "readMore": "阅读更多",
+    "backToHome": "返回首页"
+  },
+  "metadata": {
+    "home": {
+      "title": "首页 - 多语言应用",
+      "description": "欢迎访问我们的多语言应用。探索多种语言的内容。"
+    },
+    "about": {
+      "title": "关于我们 - 多语言应用",
+      "description": "了解更多关于我们公司和使命"
+    },
+    "products": {
+      "title": "产品 - 多语言应用",
+      "description": "探索我们的产品和服务范围"
+    },
+    "contact": {
+      "title": "联系我们 - 多语言应用",
+      "description": "如有任何问题或需要支持，请与我们的团队联系"
+    }
+  }
+} 

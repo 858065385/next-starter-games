@@ -1,7 +1,19 @@
 import type { NextConfig } from "next";
+import { locales } from "./src/app/config/i18n";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  // 配置静态资源路径
+  images: {
+    domains: [],
+    remotePatterns: [],
+  },
+  // 提供給客户端的环境变量
+  env: {
+    NEXT_PUBLIC_SUPPORTED_LOCALES: locales.join(','),
+    // 全局时区设置，确保服务器和客户端渲染一致
+    NEXT_PUBLIC_TIMEZONE: 'UTC',
+  },
 };
 
 export default nextConfig;

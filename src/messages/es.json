@@ -1,0 +1,41 @@
+{
+  "home": {
+    "title": "Bienvenido a nuestro sitio web multilingüe",
+    "description": "Este es un sitio web multilingüe construido con Next.js",
+    "cta": "Comenzar"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "products": "Productos",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "Acerca de Nosotros",
+    "description": "Aprenda más sobre nuestra empresa y nuestra misión.",
+    "history": "Nuestra empresa fue fundada en 2023 con la misión de construir sitios web multilingües excepcionales.",
+    "team": "Nuestro Equipo",
+    "teamDescription": "Tenemos un equipo dedicado de desarrolladores, diseñadores y creadores de contenido."
+  },
+  "products": {
+    "title": "Nuestros Productos",
+    "description": "Explore nuestra gama de productos y servicios.",
+    "featuredProducts": "Productos Destacados",
+    "allProducts": "Todos los Productos",
+    "categories": "Categorías",
+    "buyNow": "Comprar Ahora"
+  },
+  "footer": {
+    "copyright": "© 2025 Mi Aplicación Multilingüe. Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "contact": "Contáctenos"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Se produjo un error",
+    "retry": "Reintentar",
+    "readMore": "Leer Más",
+    "backToHome": "Volver al Inicio"
+  }
+} 

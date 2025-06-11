@@ -1,0 +1,59 @@
+{
+  "home": {
+    "title": "Welcome to our multilingual website",
+    "description": "This is a multilingual website built with Next.js",
+    "cta": "Get Started"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Learn more about our company and our mission.",
+    "history": "Our company was founded in 2023 with a mission to build exceptional multilingual websites.",
+    "team": "Our Team",
+    "teamDescription": "We have a dedicated team of developers, designers, and content creators."
+  },
+  "products": {
+    "title": "Our Products",
+    "description": "Explore our range of products and services.",
+    "featuredProducts": "Featured Products",
+    "allProducts": "All Products",
+    "categories": "Categories",
+    "buyNow": "Buy Now"
+  },
+  "footer": {
+    "copyright": "© 2025 My Multilingual App. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact Us"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "readMore": "Read More",
+    "backToHome": "Back to Home"
+  },
+  "metadata": {
+    "home": {
+      "title": "Home - Multilingual App",
+      "description": "Welcome to our multilingual application. Explore our content in multiple languages."
+    },
+    "about": {
+      "title": "About Us - Multilingual App",
+      "description": "Learn more about our company and our mission"
+    },
+    "products": {
+      "title": "Products - Multilingual App",
+      "description": "Explore our range of products and services"
+    },
+    "contact": {
+      "title": "Contact Us - Multilingual App",
+      "description": "Get in touch with our team for any inquiries or support"
+    }
+  }
+} 
