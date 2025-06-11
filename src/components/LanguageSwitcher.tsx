@@ -59,7 +59,7 @@ export function LanguageSwitcher({
   return (
     <div className="relative" ref={dropdownRef}>
       <button 
-        className="flex items-center space-x-1 px-3 py-2 text-sm text-gray-300 rounded-md border border-gray-600 hover:text-white hover:border-gray-400"
+        className="flex cursor-pointer items-center space-x-1 px-3 py-2 text-sm text-gray-300 rounded-md border border-gray-600 hover:text-white hover:border-gray-400"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>{localeNames[currentLocale]}</span>

@@ -38,6 +38,14 @@ h6 {
     margin: 0;
 }
 
+.i-logo2 {
+     
+  background-image: url(/images/logo2.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* --- Header & Navigation --- */
 .header-container {
     background-color: rgba(33, 34, 51, 0.9);
@@ -109,11 +117,13 @@ h6 {
 /* --- Main Content --- */
 .main-content {
     padding: 80px 0;
+    padding-top: 0px;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     flex: 1;
     box-sizing: border-box;
+    margin-top: 80px;
 }
 
 /* --- Game Gallery --- */
@@ -467,8 +477,7 @@ h6 {
 /* 游戏列表样式 */
 .games-container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+    margin: 0 auto; 
 }
 
 .search-container {
@@ -528,7 +537,8 @@ h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 20px;
 }
 
 .back-button {

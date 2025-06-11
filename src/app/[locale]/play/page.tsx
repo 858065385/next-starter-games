@@ -204,7 +204,7 @@ export default function PlayPage() {
     <div className="game-page-container">
       <div className="game-header">
         <h1>{title}</h1>
-        <Link href={`/${locale}/games`} className="back-button">
+        <Link href={`/${locale}/`} className="back-button">
           {t('backToGames')}
         </Link>
       </div>

@@ -266,7 +266,7 @@ export default function GamesList() {
           placeholder="Search games..." 
           value={searchTerm} 
           onChange={handleSearch} 
-          className="search-input"
+          className="search-input mt-[50px] border-1 border-[#333] rounded-lg p-2"
         />
       </div>
       
