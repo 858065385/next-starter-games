@@ -67,8 +67,8 @@ export function Header({ locale, messages }: HeaderProps) {
               <h4>PlayNow</h4>
             </Link>
           </div>
-          <div className="flex justify-end">
-            <div className="nav-links mr-[30px]">
+          <div className="flex justify-end items-center">
+            <div className="nav-links mr-[30px] hidden md:flex">
               <Link
                 href={`/${locale}`}
                 className={isActive(`/${locale}`) ? "active-link" : ""}

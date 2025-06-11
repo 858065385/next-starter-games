@@ -195,7 +195,7 @@ export default function GamesList() {
           <h1 style={{ marginRight: '16px' }}>{t.searchResults}</h1>
           <p>{t.foundGames(results.length)}</p>
         </div>
-        <div className="game-gallery">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {results.length > 0 ? 
             results.map(game => renderGameElement(game)) : 
             <p>{t.noGames}</p>
@@ -234,7 +234,7 @@ export default function GamesList() {
             <h1 style={{ marginRight: '16px' }}>{title}</h1>
             <p>{description}</p>
           </div>
-          <div className="game-gallery">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {categoryGames.map(game => renderGameElement(game))}
           </div>
         </section>
