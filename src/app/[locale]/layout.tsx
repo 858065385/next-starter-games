@@ -43,7 +43,7 @@ export default async function LocaleLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
         <Header locale={locale} messages={messages} />
-        <main className="container mx-auto   flex-grow">
+        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full flex-grow">
           {children}
         </main>
         <Footer locale={locale} messages={messages} />

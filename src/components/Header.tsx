@@ -60,7 +60,7 @@ export function Header({ locale, messages }: HeaderProps) {
   return (
     <>
       <header className="header-container">
-        <nav className="navigation flex justify-between items-center">
+        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div>
             <Link href={`/${locale}`} className="logo-container">
               <i className="logo i-logo2"></i>
