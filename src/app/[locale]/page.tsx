@@ -1,15 +1,14 @@
 import { Locale } from '@/app/config/i18n' 
 import GamesList from '@/components/GamesList'
-import { LocaleParams } from '@/app/types/routeParams'
+
 /**
  * 生成元数据
  */
 export async function generateMetadata({
-  params
-}: LocaleParams) {
-  // 先await params，然后再解构
-  const { locale } = await Promise.resolve(params)
-  
+  params: { locale }
+}: {
+  params: { locale: Locale }
+}) {
   // 直接在页面中定义元数据
   const metadata = {
     en: {

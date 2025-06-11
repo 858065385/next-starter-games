@@ -1,8 +1,9 @@
-import type { NextConfig } from "next";
-import { locales } from "./src/app/config/i18n";
+/** @type {import('next').NextConfig} */
+import { locales } from "./src/app/config/i18n.js";
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   reactStrictMode: true,
+  transpilePackages: ['geist'],
   // 配置静态资源路径
   images: {
     domains: [],
@@ -16,4 +17,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default nextConfig; 

@@ -2,16 +2,13 @@
 
 import { Locale, defaultLocale } from '@/app/config/i18n'
 import { useParams, useSearchParams } from 'next/navigation'
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect, useCallback, useMemo, Suspense } from 'react'
 import { Game, GamesData } from '@/types/games'
 import Link from 'next/link'
 import { getLocalizedText } from '@/lib/utils'
 import Image from 'next/image'
 
-/**
- * 游戏详情页面组件
- */
-export default function PlayPage() {
+function GameContent() {
   const { locale } = useParams() as { locale: Locale }
   const searchParams = useSearchParams()
   const gameId = searchParams.get('id')
@@ -249,14 +246,27 @@ export default function PlayPage() {
                 </div>
               </div>
               
-              <div id="dimensions-section">
-                <h2>{t('dimensions')}</h2>
-                <p>{game.width} x {game.height}</p>
-              </div>
+              {game.width && game.height && (
+                <div id="dimensions-section">
+                  <h2>{t('dimensions')}</h2>
+                  <p>{`${game.width} x ${game.height}`}</p>
+                </div>
+              )}
             </section>
           </div>
         </div>
       </main>
     </div>
   )
+}
+
+/**
+ * 游戏详情页面组件
+ */
+export default function PlayPage() {
+  return (
+    <Suspense fallback={<div className="loading">Loading...</div>}>
+      <GameContent />
+    </Suspense>
+  );
 }

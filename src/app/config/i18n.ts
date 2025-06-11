@@ -1,21 +1,11 @@
 /**
- * 多语言配置文件
- * 定义支持的语言、默认语言和类型
+ * 多语言配置文件 - TypeScript兼容层
+ * 从 .js 文件导入，并为项目的其余部分提供类型
  */
+const i18nModule = require('./i18n.js');
+import type { Locale as TLocale, localeNames as TLocaleNames, locales as TLocales, defaultLocale as TDefaultLocale } from './i18n.d';
 
-// 支持的语言列表
-export const locales = ['en', 'zh', 'es', 'fr'] as const
-
-// 语言类型定义
-export type Locale = typeof locales[number]
-
-// 默认语言
-export const defaultLocale: Locale = 'en'
-
-// 语言显示名称
-export const localeNames: Record<Locale, string> = {
-  'en': 'English',
-  'zh': '中文',
-  'es': 'Español',
-  'fr': 'Français'
-}
+export const locales: typeof TLocales = i18nModule.locales;
+export const defaultLocale: typeof TDefaultLocale = i18nModule.defaultLocale;
+export const localeNames: typeof TLocaleNames = i18nModule.localeNames;
+export type Locale = TLocale; 

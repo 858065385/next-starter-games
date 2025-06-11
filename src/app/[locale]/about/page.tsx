@@ -1,17 +1,15 @@
 import { Locale } from '@/app/config/i18n'
 import { getMessages } from '@/lib/getMessages'
 import { AboutContent } from '@/components/AboutContent'
-import { LocaleParams } from '@/app/types/routeParams'
 
 /**
  * 生成元数据
  */
 export async function generateMetadata({
-  params
-}: LocaleParams) {
-  // 先await params，然后再解构
-  const { locale } = await Promise.resolve(params)
-  
+  params: { locale }
+}: {
+  params: { locale: Locale }
+}) {
   // 直接在页面中定义元数据
   const metadata = {
     en: {
@@ -40,11 +38,10 @@ export async function generateMetadata({
  * 关于页面组件 - 服务器端
  */
 export default async function AboutPage({
-  params
-}: LocaleParams) {
-  // 先await params，然后再解构
-  const { locale } = await Promise.resolve(params)
-  
+  params: { locale }
+}: {
+  params: { locale: Locale }
+}) {
   // 渲染客户端组件，传递必要的props
   return (
     <div>
