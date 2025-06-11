@@ -1,7 +1,588 @@
 @import "tailwindcss";
 
+:root {
+    --primary-bg: #0C0D14;
+    --secondary-bg: #1a1b23;
+    --header-bg: rgba(33, 34, 51, 0.9);
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --accent-color: #373952;
+    --font-base-size: 16px;
+    /* 默认字体大小 */
+}
+
+html {
+    font-size: var(--font-base-size);
+}
+
 body {
-  background: #ffffff;
-  color: #171717;
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 900;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* --- Header & Navigation --- */
+.header-container {
+    background-color: rgba(33, 34, 51, 0.9);
+    color: var(--text-primary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 0.8rem 1rem;
+    /* Padding for mobile view */
+}
+
+.navigation {
+    max-width: 1200px;
+    /* Align with main-content */
+    margin: 0 auto;
+    /* Center the navigation */
+    width: 100%;
+    display: flex;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+}
+
+.search-form {
+    display: block;
+    /* Show search form on desktop */
+    margin-left: auto;
+    /* Push search form to the right */
+    max-width: 400px;
+    /* But not too much space */
+    text-align: right;
+}
+
+.TopSearch_searchInput__Nbapa {
+    background-color: var(--background-secondary);
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+.TopSearch_searchInput__Nbapa::placeholder {
+    color: var(--text-muted);
+}
+
+.search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.relative.search-form {
+    position: relative;
+}
+
+/* --- Main Content --- */
+.main-content {
+    padding: 80px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+/* --- Game Gallery --- */
+.game-category {
+    margin-bottom: 3rem;
+}
+
+.game-category>div:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.game-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.game-thumbnail {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--secondary-bg);
+}
+
+.game-thumbnail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.game-thumbnail img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.game-thumbnail:hover img {
+    transform: scale(1.05);
+}
+
+.title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 1.5rem 1rem 1rem;
+    text-align: left;
+}
+
+.title-overlay h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Game Play Page Specifics --- */
+.game-play {
+    width: 100%;
+    background-color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    line-height: 0;
+    /* 移除 iframe 下方的潜在空间 */
+}
+
+.game-play iframe {
+    width: 100%;
+    height: auto;
+    /* 高度将由 aspect-ratio 自动计算 */
+    border: none;
+    display: block;
+}
+
+/* --- Hamburger Menu & Side Nav --- */
+.hamburger-btn {
+    display: none;
+    /* Hidden on desktop */
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 280px;
+    background-color: var(--secondary-bg);
+    z-index: 2000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.side-menu.open {
+    transform: translateX(0);
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.side-menu .search-form {
+    display: none;
+}
+
+.side-menu-nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.side-menu-nav a i {
+    width: 20px;
+    /* Align icons */
+}
+
+.side-menu-nav a:hover {
+    color: var(--text-primary);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Footer --- */
+.site-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--secondary-bg);
+    color: #b2b2b2;
+    font-size: 0.9rem;
+}
+
+.site-footer a {
+    color: #b2b2b2;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* 活动链接样式 */
+.active-link {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+}
+
+/* 为顶部导航的活动链接添加下划线 */
+.nav-links .active-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+}
+
+/* 侧边菜单的活动链接样式 */
+.side-menu-nav .active-link {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+    background-color: var(--accent-color);
+    border-radius: 6px;
+}
+
+/* ========== Media Queries for Responsiveness ========== */
+
+@media (max-width: 768px) {
+    :root {
+        --font-base-size: 14px;
+        /* 在小屏幕上减小基础字体大小 */
+    }
+
+    .navigation {
+        flex-direction: row;
+        /* Revert to row for hamburger alignment */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navigation .search-form {
+        display: none;
+        /* Hide original search bar */
+    }
+
+    .hamburger-btn {
+        display: block;
+        /* Show hamburger button */
+    }
+
+    .main-content {
+        padding-top: 80px;
+        /* Adjust padding for fixed header */
+    }
+
+    .game-gallery {
+        grid-template-columns: 1fr;
+        /* 单列布局 */
+        gap: 1rem;
+    }
+
+    .game-play,
+    .game-info,
+    .share-section {
+        flex-direction: column;
+    }
+
+    .game-info {
+        padding: 1rem;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .header-container {
+        padding: 0.5rem 2rem;
+    }
+
+    .navigation {
+        gap: 2rem;
+        /* Add space between nav items */
+    }
+
+    .logo-container {
+        flex-shrink: 0;
+        /* Prevent logo from shrinking */
+    }
+
+    .search-form {
+        display: block;
+        /* Show search form on desktop */
+        margin-left: auto;
+        /* Push search form to the right */
+        width: 100%;
+        /* Occupy available space within its max-width */
+        max-width: 400px;
+        /* But not too much space */
+    }
+
+    .hamburger-btn {
+        display: none;
+    }
+
+    .side-menu {
+        display: none;
+    }
+
+    .overlay {
+        display: none !important;
+        /* Ensure overlay is never shown on desktop */
+    }
+
+    .nav-links {
+        display: flex;
+        /* Show nav links on desktop */
+        gap: 1.5rem;
+        align-items: center;
+        /* Vertically align items */
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--text-secondary);
+        font-weight: 500;
+    }
+
+    .nav-links a:hover {
+        color: var(--text-primary);
+    }
+
+    .game-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .game-iframe-container {
+        display: flex;
+        flex-direction: column;
+        /* Changed to column for top-bottom layout */
+        align-items: center;
+        /* Center the content */
+        gap: 2rem;
+    }
+
+    .game-iframe {
+        width: 100%;
+        /* Take full container width */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        background-color: #1a1b23;
+        border-radius: 12px;
+    }
+
+    .game-details {
+        width: 100%;
+        /* Take full container width */
+    }
+}
+
+.nav-links {
+    display: none;
+    /* Hide nav links by default on mobile */
+}
+
+/* 游戏列表样式 */
+.games-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.search-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.error-message {
+    background-color: rgba(220, 38, 38, 0.1);
+    color: #ef4444;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.no-games-message {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+.game-tags-small {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.game-tag-small {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+/* 游戏详情页样式 */
+.game-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #4a4c6a;
+}
+
+#game-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#description-section,
+#instructions-section,
+#category-section,
+#tags-section,
+#dimensions-section {
+    margin-bottom: 1.5rem;
+}
+
+#description-section h2,
+#instructions-section h2,
+#category-section h2,
+#tags-section h2,
+#dimensions-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#game-description,
+#game-instructions {
+    line-height: 1.6;
+}
+
+#game-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.game-tag {
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
 }

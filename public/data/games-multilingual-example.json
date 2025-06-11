@@ -1,0 +1,150 @@
+{
+  "categories": {
+    "action": {
+      "title": {
+        "en": "🔥 Action-Packed Thrills",
+        "zh": "🔥 刺激动作游戏",
+        "es": "🔥 Emociones llenas de acción",
+        "fr": "🔥 Sensations fortes pleines d'action"
+      },
+      "description": {
+        "en": "Get into the heart of the action with these exciting games!",
+        "zh": "体验这些刺激游戏的核心动作！",
+        "es": "¡Sumérgete en la acción con estos emocionantes juegos!",
+        "fr": "Plongez au cœur de l'action avec ces jeux passionnants !"
+      },
+      "weight": 100,
+      "games": ["pacman", "snake", "defender"]
+    },
+    "puzzle": {
+      "title": {
+        "en": "🧠 Brain-Teasing Puzzles",
+        "zh": "🧠 烧脑解谜游戏",
+        "es": "🧠 Rompecabezas que desafían la mente",
+        "fr": "🧠 Casse-têtes qui stimulent l'esprit"
+      },
+      "description": {
+        "en": "Challenge your mind and solve these clever puzzles.",
+        "zh": "挑战你的思维，解决这些巧妙的谜题。",
+        "es": "Desafía tu mente y resuelve estos ingeniosos rompecabezas.",
+        "fr": "Défiez votre esprit et résolvez ces énigmes astucieuses."
+      },
+      "weight": 70,
+      "games": ["tetris", "puzzle"]
+    }
+  },
+  "games": {
+    "pacman": {
+      "id": "pacman",
+      "title": {
+        "en": "Pacman",
+        "zh": "吃豆人",
+        "es": "Comecocos",
+        "fr": "Pac-Man"
+      },
+      "description": {
+        "en": "A timeless arcade classic where you navigate a maze, eat all the dots, and evade the colorful ghosts!",
+        "zh": "一个永恒的街机经典，你在迷宫中导航，吃掉所有的点，并躲避彩色的幽灵！",
+        "es": "¡Un clásico arcade atemporal donde navegas por un laberinto, comes todos los puntos y evitas a los fantasmas de colores!",
+        "fr": "Un classique d'arcade intemporel où vous naviguez dans un labyrinthe, mangez tous les points et évitez les fantômes colorés !"
+      },
+      "instructions": {
+        "en": "Use the arrow keys to move Pac-Man. Clear the maze by eating all the small dots. Eating a large Power Pellet allows you to temporarily eat the ghosts for bonus points.",
+        "zh": "使用方向键移动吃豆人。通过吃掉所有小点来清除迷宫。吃掉大能量豆可以暂时吃掉幽灵获得额外分数。",
+        "es": "Usa las teclas de flecha para mover a Pac-Man. Despeja el laberinto comiendo todos los puntos pequeños. Comer una gran píldora de poder te permite comer temporalmente a los fantasmas para obtener puntos extra.",
+        "fr": "Utilisez les touches fléchées pour déplacer Pac-Man. Nettoyez le labyrinthe en mangeant tous les petits points. Manger une grande pilule énergétique vous permet de manger temporairement les fantômes pour des points bonus."
+      },
+      "category": "action",
+      "tags": ["classic", "maze", "arcade"],
+      "weight": 100,
+      "width": 800,
+      "height": 600,
+      "thumb": "img/games/pacman.png",
+      "url": "games/pacman/index.html"
+    },
+    "tetris": {
+      "id": "tetris",
+      "title": {
+        "en": "Tetris",
+        "zh": "俄罗斯方块",
+        "es": "Tetris",
+        "fr": "Tetris"
+      },
+      "description": {
+        "en": "The iconic puzzle game of falling blocks. Strategically arrange them to create and clear solid horizontal lines.",
+        "zh": "标志性的下落方块益智游戏。战略性地排列它们以创建和消除实心水平线。",
+        "es": "El icónico juego de rompecabezas de bloques que caen. Organízalos estratégicamente para crear y despejar líneas horizontales sólidas.",
+        "fr": "Le jeu de puzzle iconique de blocs qui tombent. Disposez-les stratégiquement pour créer et effacer des lignes horizontales solides."
+      },
+      "instructions": {
+        "en": "Use the arrow keys to move and rotate the falling blocks (Tetriminos). Complete horizontal lines to score points and make space for more blocks. The game ends if the blocks stack up to the top.",
+        "zh": "使用方向键移动和旋转下落的方块（俄罗斯方块）。完成水平线以得分并为更多方块腾出空间。如果方块堆叠到顶部，游戏结束。",
+        "es": "Usa las teclas de flecha para mover y rotar los bloques que caen (Tetriminos). Completa líneas horizontales para ganar puntos y hacer espacio para más bloques. El juego termina si los bloques se apilan hasta arriba.",
+        "fr": "Utilisez les touches fléchées pour déplacer et faire pivoter les blocs qui tombent (Tetriminos). Complétez des lignes horizontales pour marquer des points et faire de la place pour plus de blocs. Le jeu se termine si les blocs s'empilent jusqu'en haut."
+      },
+      "category": "puzzle",
+      "tags": ["classic", "blocks", "strategy"],
+      "weight": 100,
+      "width": 800,
+      "height": 600,
+      "thumb": "img/games/tetris.png",
+      "url": "games/tetris/index.html"
+    },
+    "snake": {
+      "id": "snake",
+      "title": {
+        "en": "Snake",
+        "zh": "贪吃蛇",
+        "es": "Serpiente",
+        "fr": "Serpent"
+      },
+      "description": {
+        "en": "The classic game of growth and survival. Guide your snake to eat food and grow longer, but don't run into walls or yourself!",
+        "zh": "经典的成长和生存游戏。引导你的蛇吃食物并变长，但不要撞到墙壁或自己！",
+        "es": "El juego clásico de crecimiento y supervivencia. ¡Guía a tu serpiente para comer alimentos y crecer más, pero no choques contra las paredes o contra ti mismo!",
+        "fr": "Le jeu classique de croissance et de survie. Guidez votre serpent pour manger de la nourriture et grandir, mais ne heurtez pas les murs ou vous-même !"
+      },
+      "instructions": {
+        "en": "Use the arrow keys to change the snake's direction. Eat the food that appears on the screen to grow. The game ends if the snake collides with the edges of the screen or its own body.",
+        "zh": "使用方向键改变蛇的方向。吃屏幕上出现的食物来成长。如果蛇与屏幕边缘或自己的身体相撞，游戏结束。",
+        "es": "Usa las teclas de flecha para cambiar la dirección de la serpiente. Come la comida que aparece en la pantalla para crecer. El juego termina si la serpiente choca con los bordes de la pantalla o con su propio cuerpo.",
+        "fr": "Utilisez les touches fléchées pour changer la direction du serpent. Mangez la nourriture qui apparaît à l'écran pour grandir. Le jeu se termine si le serpent entre en collision avec les bords de l'écran ou son propre corps."
+      },
+      "category": "action",
+      "tags": ["classic", "survival", "arcade"],
+      "weight": 90,
+      "width": 800,
+      "height": 600,
+      "thumb": "img/games/snake.png",
+      "url": "games/snake/index.html"
+    },
+    "puzzle": {
+      "id": "puzzle",
+      "title": {
+        "en": "Puzzle",
+        "zh": "拼图",
+        "es": "Rompecabezas",
+        "fr": "Puzzle"
+      },
+      "description": {
+        "en": "A relaxing jigsaw puzzle game. Piece together beautiful images and challenge your visual perception.",
+        "zh": "一款轻松的拼图游戏。将美丽的图像拼在一起，挑战你的视觉感知。",
+        "es": "Un relajante juego de rompecabezas. Une hermosas imágenes y desafía tu percepción visual.",
+        "fr": "Un jeu de puzzle relaxant. Assemblez de belles images et défiez votre perception visuelle."
+      },
+      "instructions": {
+        "en": "Drag and drop the puzzle pieces onto the board to assemble the image. Start with the edges and work your way in. There's no time limit, so you can enjoy it at your own pace.",
+        "zh": "拖放拼图块到板上组装图像。从边缘开始，然后向内工作。没有时间限制，所以你可以按照自己的节奏享受。",
+        "es": "Arrastra y suelta las piezas del rompecabezas en el tablero para ensamblar la imagen. Comienza con los bordes y trabaja hacia adentro. No hay límite de tiempo, así que puedes disfrutarlo a tu propio ritmo.",
+        "fr": "Faites glisser et déposez les pièces du puzzle sur le plateau pour assembler l'image. Commencez par les bords et travaillez vers l'intérieur. Il n'y a pas de limite de temps, vous pouvez donc en profiter à votre rythme."
+      },
+      "category": "puzzle",
+      "tags": ["jigsaw", "casual", "brain"],
+      "weight": 80,
+      "width": 800,
+      "height": 600,
+      "thumb": "img/games/puzzle.png",
+      "url": "games/puzzle/index.html"
+    }
+  }
+} 

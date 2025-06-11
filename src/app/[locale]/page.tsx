@@ -1,5 +1,4 @@
 import { Locale } from '@/app/config/i18n'
-import { getMessages } from '@/lib/getMessages'
 import { HomeContent } from '@/components/HomeContent'
 
 /**
@@ -42,13 +41,10 @@ export default async function HomePage({
   // 先await params，然后再解构
   const { locale } = await Promise.resolve(params)
   
-  // 加载翻译
-  const messages = await getMessages(locale)
-  
   // 渲染客户端组件，传递必要的props
   return (
     <div>
-      <HomeContent locale={locale} messages={messages} />
+      <HomeContent locale={locale} />
     </div>
   )
 } 

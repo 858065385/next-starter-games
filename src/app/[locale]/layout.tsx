@@ -2,6 +2,7 @@ import { Locale, locales } from '@/app/config/i18n'
 import { getMessages } from '@/lib/getMessages'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { geistSans, geistMono } from '../layout'
 
 /**
  * 为路由参数生成静态路径
@@ -29,12 +30,24 @@ export default async function LocaleLayout({
   const messages = await getMessages(locale)
   
   return (
-    <div lang={locale} className="flex flex-col min-h-screen">
-      <Header locale={locale} messages={messages} />
-      <main className="container mx-auto px-4 py-6 flex-grow">
-        {children}
-      </main>
-      <Footer locale={locale} messages={messages} />
-    </div>
+    <html lang={locale}>
+      <head>
+        {/* Font Awesome CDN */}
+        <link 
+          rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossOrigin="anonymous" 
+          referrerPolicy="no-referrer" 
+        />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+        <Header locale={locale} messages={messages} />
+        <main className="container mx-auto px-4 py-6 flex-grow">
+          {children}
+        </main>
+        <Footer locale={locale} messages={messages} />
+      </body>
+    </html>
   )
 } 

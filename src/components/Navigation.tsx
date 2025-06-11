@@ -1,18 +1,25 @@
 'use client'
 
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
 import { useParams, usePathname } from 'next/navigation'
 import { Locale, locales, localeNames } from '@/app/config/i18n'
+import { getTranslation } from '@/lib/translateHelper'
+
+interface NavigationProps {
+  messages: any
+}
 
 /**
  * 导航组件
  * 包含主导航链接和语言切换功能
  */
-export function Navigation() {
-  const t = useTranslations('navigation')
+export function Navigation({ messages }: NavigationProps) {
   const pathname = usePathname()
   const { locale } = useParams() as { locale: Locale }
+  
+  // 使用翻译辅助函数
+  const t = (path: string, defaultValue: string = path) => 
+    getTranslation(messages, path, defaultValue);
   
   // 提取当前路径中的语言代码后的部分
   const pathnameWithoutLocale = pathname.split('/').slice(2).join('/')
@@ -36,25 +43,25 @@ export function Navigation() {
                 href={`/${locale}`} 
                 className="px-3 py-2 rounded-md hover:bg-gray-200"
               >
-                {t('home')}
+                {t('navigation.home', 'Home')}
               </Link>
               <Link 
                 href={`/${locale}/about`} 
                 className="px-3 py-2 rounded-md hover:bg-gray-200"
               >
-                {t('about')}
+                {t('navigation.about', 'About')}
               </Link>
               <Link 
                 href={`/${locale}/products`} 
                 className="px-3 py-2 rounded-md hover:bg-gray-200"
               >
-                {t('products')}
+                {t('navigation.products', 'Products')}
               </Link>
               <Link 
                 href={`/${locale}/contact`} 
                 className="px-3 py-2 rounded-md hover:bg-gray-200"
               >
-                {t('contact')}
+                {t('navigation.contact', 'Contact')}
               </Link>
             </div>
           </div>

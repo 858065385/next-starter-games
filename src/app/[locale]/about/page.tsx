@@ -45,13 +45,10 @@ export default async function AboutPage({
   // 先await params，然后再解构
   const { locale } = await Promise.resolve(params)
   
-  // 加载翻译
-  const messages = await getMessages(locale)
-  
   // 渲染客户端组件，传递必要的props
   return (
     <div>
-      <AboutContent locale={locale} messages={messages} />
+      <AboutContent locale={locale} />
     </div>
   )
 } 
