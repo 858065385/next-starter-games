@@ -192,7 +192,7 @@ function GameContent() {
     )
   }
   
-  // 获取本地化文本
+  // 获取本地化文本 test
   const title = getLocalizedText(game.title, locale);
   const description = getLocalizedText(game.description, locale);
   const instructions = getLocalizedText(game.instructions, locale);
