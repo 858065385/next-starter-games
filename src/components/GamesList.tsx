@@ -108,7 +108,7 @@ export default function GamesList() {
         if (!response.ok) {
           throw new Error(`Failed to fetch games: ${response.status}`);
         }
-        const data = await response.json();
+        const data = await response.json() as GamesData;
         setGamesData(data);
       } catch (err) {
         console.error('Error loading games data:', err);
