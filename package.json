@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NEXT_PRIVATE_STANDALONE=true next build",
+    "build": "set NEXT_PRIVATE_STANDALONE=true && next build",
     "start": "next start",
     "lint": "next lint",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "^1.0.0-beta.3",
+    "@tailwindcss/postcss": "^4.1.10",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
