@@ -1,9 +1,16 @@
 import { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import { PrismaClient } from "../generated/prisma";
+import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
+// 使用全局变量确保 Prisma 客户端在 serverless 环境中是单例
+const globalForPrisma = globalThis as unknown as {
+  prisma: PrismaClient | undefined;
+};
+
+const prisma = globalForPrisma.prisma ?? new PrismaClient();
+
+if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 
 // Debug: Log environment variables (只在开发环境)
 if (process.env.NODE_ENV === 'development') {
