@@ -16,7 +16,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "set NEXT_PRIVATE_STANDALONE=true && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "deploy": "wrangler deploy",

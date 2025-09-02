@@ -4,6 +4,8 @@ import { locales } from "./src/app/config/i18n.js";
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['geist'],
+  // 启用 standalone 输出模式，用于 OpenNext.js
+  output: 'standalone',
   // 配置静态资源路径
   images: {
     domains: [],
