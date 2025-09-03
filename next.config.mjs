@@ -7,7 +7,13 @@ const nextConfig = {
   // 配置静态资源路径
   images: {
     domains: [],
-    remotePatterns: [],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+        pathname: '/a/**',
+      },
+    ],
   },
   // 提供給客户端的环境变量
   env: {

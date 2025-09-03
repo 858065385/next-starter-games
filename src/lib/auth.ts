@@ -27,24 +27,6 @@ export const authOptions: NextAuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-      // 绕过 discovery，直接指定 Google OAuth 端点
-      wellKnown: undefined,
-      authorization: {
-        url: "https://accounts.google.com/o/oauth2/v2/auth",
-        params: {
-          scope: "openid email profile",
-          access_type: "offline",
-          prompt: "consent",
-        },
-      },
-      token: {
-        url: "https://www.googleapis.com/oauth2/v4/token",
-        params: {},
-      },
-      userinfo: {
-        url: "https://www.googleapis.com/oauth2/v3/userinfo", 
-        params: {},
-      },
       httpOptions: {
         timeout: 30000, // 增加到30秒
       },

@@ -8,9 +8,7 @@ http://localhost:3000/api/auth/callback/google （本地开发环境）
 
 https://playsnow.net/api/auth/callback/google （生产环境）
 
-如果未来会启用 www.playsnow.net，可额外添加：
-
-https://www.playsnow.net/api/auth/callback/google
+ 
 
 验收标准
 
