@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://www.playsnow.net/:path*",
+      "destination": "https://playsnow.net/:path*",
+      "permanent": true
+    }
+  ]
+}
