@@ -1,9 +1,16 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
-      "source": "https://www.playsnow.net/:path*",
+      "source": "/:path*",      
+      "has": [
+        {
+          "type": "host",
+          "value": "www.playsnow.net"   
+        }
+      ],
       "destination": "https://playsnow.net/:path*",
-      "permanent": true
+      "permanent": true               
     }
   ]
 }
